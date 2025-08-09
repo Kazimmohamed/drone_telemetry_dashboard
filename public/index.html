@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Drone Telemetry Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Three.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>Drone Telemetry — Real-time Dashboard</h1>
+      <div id="status">WS: <span id="wsStatus">connecting...</span></div>
+    </header>
+
+    <main>
+      <section class="left-panel">
+        <div id="three-container"></div>
+        <div class="metrics">
+          <div class="metric">
+            <div class="label">Pitch</div>
+            <div id="pitchVal" class="value">--°</div>
+          </div>
+          <div class="metric">
+            <div class="label">Roll</div>
+            <div id="rollVal" class="value">--°</div>
+          </div>
+          <div class="metric">
+            <div class="label">Yaw</div>
+            <div id="yawVal" class="value">--°</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right-panel">
+        <div class="card">
+          <h3>Temperature</h3>
+          <div id="tempGauge" class="gauge">
+            <div id="tempFill" class="gauge-fill">--°C</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Battery</h3>
+          <div id="battery" class="battery">
+            <div id="batteryFill" class="battery-fill"></div>
+            <div id="batteryPct" class="battery-pct">--%</div>
+          </div>
+          <div class="note" id="batteryVolt">Voltage: -- V</div>
+        </div>
+
+        <div class="card small">
+          <h3>Humidity</h3>
+          <div id="humidityVal" class="value large">--%</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>  <code>server.js</code> </small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

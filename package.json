@@ -1,0 +1,16 @@
+{
+  "name": "drone-telemetry-dashboard",
+  "version": "1.0.0",
+  "description": "Real-time dashboard for drone telemetry (pitch, roll, yaw, temperature, humidity, battery)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Generated-for-user",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  }
+}
